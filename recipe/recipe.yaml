@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: sqlorm-py
-  version: 0.4.1
+  version: "0.4.2"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/sqlorm_py-${{ version }}.tar.gz
-  sha256: 3c894162626ae810b8d5f92de78250b0349dbe0de0e3064657749b7c5a46eedd
+  sha256: 5dc8d2051d6b576d8aceaeac3078e2c8b00fcdd6e2ae1b46662df82dc1b5e0b0
 
 build:
   number: 0
