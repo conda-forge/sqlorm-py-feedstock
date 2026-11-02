@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: sqlorm-py
-  version: "0.4.2"
+  version: "0.4.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/sqlorm_py-${{ version }}.tar.gz
-  sha256: 5dc8d2051d6b576d8aceaeac3078e2c8b00fcdd6e2ae1b46662df82dc1b5e0b0
+  sha256: 70ff842113fc332fe0e6a8ae20e0cc1edcf2aa4d192c9a39eebbf8ccdf943f38
 
 build:
   number: 0
@@ -31,7 +31,9 @@ tests:
       imports:
         - sqlorm
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://github.com/hyperflask/sqlorm
